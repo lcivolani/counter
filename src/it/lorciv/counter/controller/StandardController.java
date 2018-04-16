@@ -15,7 +15,6 @@ public class StandardController implements Controller {
 	
 	public void handleIncrement() {
 		System.out.println("Controller: handle increment");
-//		counter.increment();
 		Command command = new IncrementCommand(counter);
 		CommandManager.getInstance().storeAndExecute(command);
 		System.out.println(CommandManager.getInstance());
@@ -23,7 +22,6 @@ public class StandardController implements Controller {
 	
 	public void handleReset() {
 		System.out.println("Controller: handle reset");
-//		counter.reset();
 		Command command = new ResetCommand(counter);
 		CommandManager.getInstance().storeAndExecute(command);
 		System.out.println(CommandManager.getInstance());
